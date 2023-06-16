@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    .blog-segment,
+    .news-segment,
+    .events-segment,
+    .jobs-segment {
+      margin-bottom: 40px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .card {
+      border: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .blog-image,
+    .news-image,
+    .event-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .blog-title,
+    .news-description,
+    .event-title,
+    .job-position {
+      margin-bottom: 10px;
+    }
+    .subsegment,
+    .job-last-date {
+      color: #777;
+      margin-bottom: 0;
+    }
+    .job-apply-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    .job-apply-button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Blog Website</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Blogs</a>
+      <a href="#">News</a>
+      <a href="#">Events</a>
+      <a href="#">Jobs</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h2>Welcome to Our Blog Website</h2>
+    <div class="blog-segment">
+      <h3>Blogs</h3>
+      <div id="blogs-section" class="row"></div>
+    </div>
+    <div class="news-segment">
+      <h3>News Feeds</h3>
+      <div id="news-section" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#news-section" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#news-section" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="events-segment">
+      <h3>Upcoming Events and Updates</h3>
+      <div id="upcoming-events-section" class="row"></div>
+    </div>
+    <div class="jobs-segment">
+      <h3>Jobs</h3>
+      <div id="jobs-section" class="row"></div>
+    </div>
+  </main>
+  <footer>
+    &copy; 2023 Blog Website. All rights reserved.
+  </footer>
+  <script>
+    // Fetch JSON data
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        // Render blogs
+        const blogsSection = document.getElementById('blogs-section');
+
+data.blogs_array.forEach(segment => {
+  const segmentDiv = document.createElement('div');
+  segmentDiv.classList.add('blog-segment');
+
+  const segmentTitle = document.createElement('h3');
+  segmentTitle.textContent = segment.segment;
+  segmentDiv.appendChild(segmentTitle);
+
+  const segmentBlogs = segment.segment_blogs;
+  segmentBlogs.forEach(blog => {
+    const blogCard = document.createElement('div');
+    blogCard.classList.add('card');
+
+    const blogImage = document.createElement('img');
+    blogImage.classList.add('blog-image', 'card-img-top');
+    blogImage.src = blog.image;
+    blogCard.appendChild(blogImage);
+
+    const blogCardBody = document.createElement('div');
+    blogCardBody.classList.add('card-body');
+
+    const blogTitle = document.createElement('h5');
+    blogTitle.classList.add('blog-title', 'card-title');
+    blogTitle.textContent = blog.title;
+    blogCardBody.appendChild(blogTitle);
+
+    const blogSubsegment = document.createElement('p');
+    blogSubsegment.classList.add('subsegment', 'card-text');
+    blogSubsegment.textContent = blog.subsegment;
+    blogCardBody.appendChild(blogSubsegment);
+
+    blogCard.appendChild(blogCardBody);
+    segmentDiv.appendChild(blogCard);
+  });
+
+  blogsSection.appendChild(segmentDiv);
+});
+
+        // Render news feeds
+        const newsSection = document.getElementById('news-section');
+        const carouselInner = newsSection.querySelector('.carousel-inner');
+        data.news_array.forEach((news, index) => {
+          const newsCard = document.createElement('div');
+          newsCard.classList.add('carousel-item');
+          if (index === 0) {
+            newsCard.classList.add('active');
+          }
+
+          const newsImage = document.createElement('img');
+          newsImage.classList.add('news-image', 'card-img-top');
+          newsImage.src = news.image;
+          newsCard.appendChild(newsImage);
+
+          const newsCardBody = document.createElement('div');
+          newsCardBody.classList.add('card-body');
+
+          const newsDescription = document.createElement('p');
+          newsDescription.classList.add('news-description', 'card-text');
+          newsDescription.textContent = news.news_description;
+          newsCardBody.appendChild(newsDescription);
+
+          newsCard.appendChild(newsCardBody);
+          carouselInner.appendChild(newsCard);
+        });
+
+        // Render upcoming events and updates
+        const upcomingEventsSection = document.getElementById('upcoming-events-section');
+        data['upcoming-events-updates'].forEach(event => {
+          const eventDiv = document.createElement('div');
+          eventDiv.classList.add('col-md-4', 'mb-4');
+
+          const eventCard = document.createElement('div');
+          eventCard.classList.add('card');
+
+          const eventImage = document.createElement('img');
+          eventImage.classList.add('event-image', 'card-img-top');
+          eventImage.src = event.image;
+          eventCard.appendChild(eventImage);
+
+          const eventCardBody = document.createElement('div');
+          eventCardBody.classList.add('card-body');
+
+          const eventTitle = document.createElement('h5');
+          eventTitle.classList.add('event-title', 'card-title');
+          eventTitle.textContent = event.title;
+          eventCardBody.appendChild(eventTitle);
+
+          const eventUpdates = document.createElement('ul');
+          event.updates.forEach(update => {
+            const listItem = document.createElement('li');
+            listItem.textContent = update;
+            eventUpdates.appendChild(listItem);
+          });
+
+          eventCardBody.appendChild(eventUpdates);
+          eventCard.appendChild(eventCardBody);
+          eventDiv.appendChild(eventCard);
+          upcomingEventsSection.appendChild(eventDiv);
+        });
+
+        // Render jobs
+        const jobsSection = document.getElementById('jobs-section');
+        data.jobs.forEach(job => {
+          const jobDiv = document.createElement('div');
+          jobDiv.classList.add('col-md-4', 'mb-4');
+
+          const jobCard = document.createElement('div');
+          jobCard.classList.add('card');
+
+          const jobCardBody = document.createElement('div');
+          jobCardBody.classList.add('card-body');
+
+          const jobPosition = document.createElement('h5');
+          jobPosition.classList.add('job-position', 'card-title');
+          jobPosition.textContent = job.position;
+          jobCardBody.appendChild(jobPosition);
+
+          const jobLocation = document.createElement('p');
+          jobLocation.classList.add('job-location', 'card-text');
+          jobLocation.textContent = 'Location: ' + job.location;
+          jobCardBody.appendChild(jobLocation);
+
+          const jobLastDate = document.createElement('p');
+          jobLastDate.classList.add('job-last-date', 'card-text');
+          jobLastDate.textContent = 'Last Date: ' + job.last_date;
+          jobCardBody.appendChild(jobLastDate);
+
+          const jobApplyButton = document.createElement('a');
+          jobApplyButton.classList.add('job-apply-button', 'btn', 'btn-primary');
+          jobApplyButton.textContent = 'Apply Now';
+          jobCardBody.appendChild(jobApplyButton);
+
+          jobCard.appendChild(jobCardBody);
+          jobDiv.appendChild(jobCard);
+          jobsSection.appendChild(jobDiv);
+        });
+
+        // Activate the carousel
+        const carousel = new bootstrap.Carousel(document.getElementById('news-section'), {
+          interval: 3000
+        });
+      });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

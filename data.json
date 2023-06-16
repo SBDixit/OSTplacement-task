@@ -1,0 +1,144 @@
+{
+    "blogs_array":[
+        {
+            "segment":"sports",
+            "segment_blogs":[
+                {
+                    "title":"Cricket’s India Test, India’s Cricket Test",
+                    "image":"https://images.thequint.com/thequint%2F2023-06%2Fdae9d6ff-1025-4d2e-9cef-737d33b2a15b%2FArjun253_1822.jpg",
+                    "subsegment":"cricket"
+                },
+                {
+                    "title":"How to Choose the Best Football Boots",
+                    "image":"https://footballblog.co.uk/wp-content/uploads/2023/06/england-training-session-and-press-conference-1-2048x1245.jpg",
+                    "subsegment":"football"
+                },
+                {
+                    "title":"3 Most Disappointing Players of the 2023 Stanley Cup Final",
+                    "image":"https://cdn-0.thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2023/06/Sergei-Bobrovsky-Panthers-4-2048x1365.jpg?ezimgfmt=ng%3Awebp%2Fngcb58",
+                    "subsegment":"hockey"
+                },
+                {
+                    "title":"Enhancing Your Roland Garros 2023 Experience as a Fan",
+                    "image":"https://i0.wp.com/www.lovetennisblog.com/wp-content/uploads/2023/04/tennis-6153444_1280.jpg?resize=768%2C511&ssl=1",
+                    "subsegment":"lawn-tennis"
+                },
+                {
+                    "title":"How to Play Badminton: Rules and Scoring",
+                    "image":"https://badmintonprofessor.com/wp-content/uploads/2021/12/How-to-Play-Badminton-Rules-and-Scoring-2048x1366.jpg",
+                    "subsegment":"badminton"
+                }
+            ]
+        },
+        {
+            "segment":"Technology",
+            "segment_blogs":[
+                {
+                    "title":"Cashing in on Crypto",
+                    "image":"https://i0.wp.com/www.lovetennisblog.com/wp-content/uploads/2023/04/tennis-6153444_1280.jpg?resize=768%2C511&ssl=1",
+                    "subsegment":"cryptocurrency"
+                },
+                {
+                    "title":"C++ is fast language, How?",
+                    "image":"https://cdn.contactcenterworld.com/images/company/cpp-turkey-1200px-logo.png",
+                    "subsegment":"programming"
+                },
+                {
+                    "title":"2023 Recession",
+                    "image":"https://www.forbes.com/advisor/wp-content/uploads/2022/08/What_Happens_During_A_Recession____Getty_Images.jpeg.jpg",
+                    "subsegment":"IT"
+                }
+            ]
+        },
+        {
+            "segment":"Others",
+            "segment_blogs":[
+                {
+                    "title":"Cashing in on Crypto",
+                    "image":"https://i0.wp.com/www.lovetennisblog.com/wp-content/uploads/2023/04/tennis-6153444_1280.jpg?resize=768%2C511&ssl=1",
+                    "subsegment":"cryptocurrency"
+                },
+                {
+                    "title":"C++ is fast language, How?",
+                    "image":"https://cdn.contactcenterworld.com/images/company/cpp-turkey-1200px-logo.png",
+                    "subsegment":"programming"
+                },
+                {
+                    "title":"2023 Recession",
+                    "image":"https://www.forbes.com/advisor/wp-content/uploads/2022/08/What_Happens_During_A_Recession____Getty_Images.jpeg.jpg",
+                    "subsegment":"IT"
+                }
+            ]
+        }
+    ],
+    "news_array":[
+        {
+            "news_description":"CBIC Chairman LIVE: GoM report on online gaming to be discussed at the GST meeting",
+            "image":"https://images.moneycontrol.com/static-mcnews/2022/09/online-gaming-rep-770x433.jpg?impolicy=website&width=770&height=431"
+        },
+        {
+            "news_description":"CBIC Chairman LIVE: GoM report on online gaming to be discussed at the GST meeting",
+            "image":"https://images.moneycontrol.com/static-mcnews/2022/09/online-gaming-rep-770x433.jpg?impolicy=website&width=770&height=431"
+        },
+        {
+            "news_description":"CBIC Chairman LIVE: GoM report on online gaming to be discussed at the GST meeting",
+            "image":"https://images.moneycontrol.com/static-mcnews/2022/09/online-gaming-rep-770x433.jpg?impolicy=website&width=770&height=431"
+        },
+        {
+            "news_description":"CBIC Chairman LIVE: GoM report on online gaming to be discussed at the GST meeting",
+            "image":"https://images.moneycontrol.com/static-mcnews/2022/09/online-gaming-rep-770x433.jpg?impolicy=website&width=770&height=431"
+        },
+        {
+            "news_description":"CBIC Chairman LIVE: GoM report on online gaming to be discussed at the GST meeting",
+            "image":"https://images.moneycontrol.com/static-mcnews/2022/09/online-gaming-rep-770x433.jpg?impolicy=website&width=770&height=431"
+        },
+        {
+            "news_description":"CBIC Chairman LIVE: GoM report on online gaming to be discussed at the GST meeting",
+            "image":"https://images.moneycontrol.com/static-mcnews/2022/09/online-gaming-rep-770x433.jpg?impolicy=website&width=770&height=431"
+        },
+        {
+            "news_description":"CBIC Chairman LIVE: GoM report on online gaming to be discussed at the GST meeting",
+            "image":"https://images.moneycontrol.com/static-mcnews/2022/09/online-gaming-rep-770x433.jpg?impolicy=website&width=770&height=431"
+        }
+    ],
+    "upcoming-events-updates":[
+        {
+            "title":"2023 ODI World Cup",
+            "image":"https://static.india.com/wp-content/uploads/2023/06/ODI-WC-2023-Schedule.jpg",
+            "updates":[
+                "West Indies, Zimbabwe And Sri Lanka Head Into Qualifier Undefeated","Captain, Vice-Captain –England vs Australia, Playing 11s For Today’s Edgbaston, Birmingham at 3.30 PM IST June 16, Friday"
+            ]
+        },
+        {
+            "title":"2023 ODI World Cup",
+            "image":"https://static.india.com/wp-content/uploads/2023/06/ODI-WC-2023-Schedule.jpg",
+            "updates":[
+                "West Indies, Zimbabwe And Sri Lanka Head Into Qualifier Undefeated","Captain, Vice-Captain –England vs Australia, Playing 11s For Today’s Edgbaston, Birmingham at 3.30 PM IST June 16, Friday"
+            ]
+        },
+        {
+            "title":"2023 ODI World Cup",
+            "image":"https://static.india.com/wp-content/uploads/2023/06/ODI-WC-2023-Schedule.jpg",
+            "updates":[
+                "West Indies, Zimbabwe And Sri Lanka Head Into Qualifier Undefeated","Captain, Vice-Captain –England vs Australia, Playing 11s For Today’s Edgbaston, Birmingham at 3.30 PM IST June 16, Friday"
+            ]
+        }
+    ],
+    "jobs":[
+        {
+            "position":"Software Engineer Intern",
+            "job_description":"Experience in software development fundamentals, knowledege in C++ and data structures",
+            "last_date":"20 June 2023"
+        },
+        {
+            "position":"Software Engineer Intern",
+            "job_description":"Experience in software development fundamentals, knowledege in C++ and data structures",
+            "last_date":"20 June 2023"
+        },
+        {
+            "position":"Software Engineer Intern",
+            "job_description":"Experience in software development fundamentals, knowledege in C++ and data structures",
+            "last_date":"20 June 2023"
+        }
+    ]
+}
